@@ -1,19 +1,35 @@
 export const auth: Auth = {
-    status: 'loggedOut',
+    isLoggedIn: false,
     username: undefined,
-    login: (username: string) => {
-        auth.status = 'loggedIn';
+    login: ({ username, firstName, lastName, email }) => {
+        auth.isLoggedIn = true;
         auth.username = username;
+        auth.firstName = firstName;
+        auth.lastName = lastName;
+        auth.email = email;
     },
     logout: () => {
-        auth.status = 'loggedOut';
+        auth.isLoggedIn = false;
         auth.username = undefined;
     },
 };
 
 export type Auth = {
-    login: (username: string) => void;
+    login: ({
+        username,
+        firstName,
+        lastName,
+        email,
+    }: {
+        username: string;
+        firstName: string;
+        lastName: string;
+        email: string;
+    }) => void;
     logout: () => void;
-    status: 'loggedIn' | 'loggedOut';
+    isLoggedIn: boolean;
     username?: string;
+    firstName?: string;
+    lastName?: string;
+    email?: string;
 };
