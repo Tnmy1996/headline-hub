@@ -79,6 +79,7 @@ module.exports = {
 
         // typescript
         '@typescript-eslint/consistent-type-exports': 'warn',
+        '@typescript-eslint/array-type': ['error', { default: 'generic' }],
         '@typescript-eslint/consistent-type-imports': [
             'warn',
             {
