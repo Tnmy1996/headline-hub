@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import { type Auth } from '@/utils/auth';
 import { type QueryClient } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { createRootRouteWithContext, Outlet } from '@tanstack/react-router';
 import { lazy } from 'react';
 
@@ -16,16 +17,16 @@ const TanStackRouterDevtools =
               })),
           );
 
-interface MyRouterContext {
+interface RootRouteContext {
     auth: Auth;
     queryClient: QueryClient;
 }
 
-export const Route = createRootRouteWithContext<MyRouterContext>()({
-    component: App,
+export const Route = createRootRouteWithContext<RootRouteContext>()({
+    component: Root,
 });
 
-function App() {
+function Root() {
     return (
         <>
             <div className='flex min-h-screen w-full min-w-[400px] flex-col'>
@@ -35,6 +36,7 @@ function App() {
                     <Outlet />
                 </main>
                 <TanStackRouterDevtools />
+                <ReactQueryDevtools />
             </div>
         </>
     );

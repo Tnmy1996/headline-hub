@@ -23,6 +23,7 @@ const router = createRouter({
     context: {
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         auth: undefined!, // We'll inject this when we render
+        // auth,
         queryClient,
     },
     defaultPreload: 'intent',
@@ -51,7 +52,7 @@ if (rootElement) {
                         router={router}
                         context={{
                             auth,
-                            // queryClient,
+                            queryClient,
                         }}
                     />
                 </QueryClientProvider>
