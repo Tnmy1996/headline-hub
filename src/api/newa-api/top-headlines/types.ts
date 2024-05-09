@@ -8,25 +8,3 @@ export type TopHeadlinesAPIParams = {
     pageSize?: number;
     page?: number;
 };
-
-export interface TopHeadlinesAPIResponse {
-    status: string;
-    totalResults: number;
-    articles: Array<Article>;
-}
-
-export interface Article {
-    source: Source;
-    author: string | null;
-    title: string;
-    description: string | null;
-    url: string;
-    urlToImage: string | null;
-    publishedAt: Date;
-    content: string | null;
-}
-
-export interface Source {
-    id: string | null;
-    name: string;
-}

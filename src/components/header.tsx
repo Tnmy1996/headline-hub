@@ -8,8 +8,8 @@ import { UserNav } from './user-nav';
 
 export function Header() {
     return (
-        <header className='sticky top-0  w-full border-b bg-background px-4 md:px-6'>
-            <div className='sticky top-0 flex h-16 w-full items-center justify-between gap-4 border-b'>
+        <header className='sticky top-0 z-50 flex w-full flex-col border-b bg-background '>
+            <div className='flex h-16 w-full items-center justify-between gap-4 border-b px-4 md:px-6'>
                 <div>
                     <Sheet>
                         <SheetTrigger asChild>

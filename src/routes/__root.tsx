@@ -37,7 +37,7 @@ function Root() {
     return (
         <div className='flex min-h-screen w-full min-w-[400px] flex-col'>
             <Header />
-            <main className='flex  flex-1 flex-col gap-4 bg-muted/40 p-4 md:gap-8 md:p-10'>
+            <main className='flex h-[calc(100vh_-_65px)] max-h-[calc(100vh_-_65px)] flex-col gap-4 bg-muted/40 p-4 md:gap-8'>
                 <Outlet />
             </main>
             <TanStackRouterDevtools />
