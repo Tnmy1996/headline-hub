@@ -35,9 +35,9 @@ export const Route = createRootRouteWithContext<RootRouteContext>()({
 
 function Root() {
     return (
-        <div className='flex min-h-screen w-full min-w-[400px] flex-col'>
+        <div className='size-full min-w-[400px]'>
             <Header />
-            <main className='flex h-[calc(100vh_-_65px)] max-h-[calc(100vh_-_65px)] flex-col gap-4 bg-muted/40 p-4 md:gap-8'>
+            <main className='flex min-h-screen flex-col p-4 pt-[65px]'>
                 <Outlet />
             </main>
             <TanStackRouterDevtools />

@@ -1,14 +1,16 @@
 import { type NewsAPIResponse } from '@/api/newa-api/types';
+import { removePropertiesByValue } from '@/utils/utility-functions';
 import { useQuery } from '@tanstack/react-query';
 
 import { newsAPIInstance } from '..';
-import { TopHeadlinesAPIPropsSchema } from './schema';
 import { type TopHeadlinesAPIParams } from './types';
 
 export const fetchTopHeadlines = async (
     params: TopHeadlinesAPIParams,
 ): Promise<NewsAPIResponse> => {
-    const validatedParams = TopHeadlinesAPIPropsSchema.parse(params);
+    // const validatedParams = TopHeadlinesAPIPropsSchema.parse(
+    // );
+    const validatedParams = removePropertiesByValue(params, [null, 'all']);
 
     const response = await newsAPIInstance.get<NewsAPIResponse>(
         `/top-headlines`,
@@ -22,8 +24,12 @@ export const fetchTopHeadlines = async (
     return response.data;
 };
 
-export const useTopHeadlinesQuery = (params: TopHeadlinesAPIParams) =>
+export const useTopHeadlinesQuery = ({
+    enabled = true,
+    ...params
+}: TopHeadlinesAPIParams & { enabled?: boolean }) =>
     useQuery({
         queryKey: ['top-headlines', params],
         queryFn: () => fetchTopHeadlines(params),
+        enabled,
     });

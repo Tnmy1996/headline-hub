@@ -2,11 +2,13 @@ import { useQuery } from '@tanstack/react-query';
 
 import { newsAPIInstance } from '..';
 import { SourcesAPIParamsSchema } from './schema';
-import { type SourceAPIParams } from './types';
+import { type SourceAPIParams, type SourceAPIResponse } from './types';
 
-const fetchSources = async (params: SourceAPIParams) => {
+const fetchSources = async (
+    params: SourceAPIParams,
+): Promise<SourceAPIResponse> => {
     const validatedParams = SourcesAPIParamsSchema.parse(params);
-    const response = await newsAPIInstance.get<unknown>(`/sources`, {
+    const response = await newsAPIInstance.get<SourceAPIResponse>(`/sources`, {
         params: {
             ...validatedParams,
         },

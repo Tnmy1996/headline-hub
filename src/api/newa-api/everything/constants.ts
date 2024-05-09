@@ -14,3 +14,9 @@ export const SORT_BY = {
     PUBLISHED_AT: 'publishedAt',
     RELEVANCY: 'relevancy',
 } as const;
+
+export const SORT_BY_LABELS = {
+    [SORT_BY.POPULARITY]: 'Popularity',
+    [SORT_BY.PUBLISHED_AT]: 'Published At',
+    [SORT_BY.RELEVANCY]: 'Relevancy',
+} as const;
