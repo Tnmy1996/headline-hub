@@ -168,9 +168,7 @@ export function TopHeadlines({
                 <div className='mx-auto flex w-full flex-1 items-center justify-center'>
                     <Spinner size='lg' />
                 </div>
-            ) : null}
-
-            {topHeadlines?.articles.length ? (
+            ) : topHeadlines?.articles.length ? (
                 <ArticleGrid
                     articles={topHeadlines.articles}
                     totalCount={topHeadlines.totalResults}
