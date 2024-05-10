@@ -170,9 +170,7 @@ export function SearchHeadlines({
                     </CardHeader>
                     <CardContent>Go ahead it won&apos;t bite </CardContent>
                 </Card>
-            ) : null}
-
-            {searchedArticles?.articles.length ? (
+            ) : searchedArticles.articles.length ? (
                 <ArticleGrid
                     articles={searchedArticles.articles}
                     totalCount={searchedArticles.totalResults}
