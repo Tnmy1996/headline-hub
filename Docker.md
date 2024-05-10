@@ -12,9 +12,8 @@
     - Navigate to the directory where you want to clone the repository.
     - Run the following command to clone the repository:
         ```
-        git clone <repository_url>
+        git clone https://github.com/Tnmy1996/headline-hub.git
         ```
-        Replace `<repository_url>` with the actual URL of your project's Git repository.
 
 2. **Navigate to the project directory**:
 
@@ -65,5 +64,3 @@
         ```
         Replace `VITE_APP_MY_ENV_VAR` with the name of your environment variable, and `value` with the desired value.
     - If you need to access the React app from a different host or IP address, replace `localhost` with the appropriate IP address or hostname when accessing the app in your web browser.
-
-ssh-keygen -t ed25519 -C "bindaltanmay1996@gmail.com"
