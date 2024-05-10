@@ -7,6 +7,7 @@
         "type": "git",
         "url": "https://github.com/Tnmy1996/headline-hub"
     },
+    "homepage": "https://tnmy1996.github.io/headline-hub/",
     "scripts": {
         "dev": "vite --host",
         "build": "tsc && vite build",
