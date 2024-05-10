@@ -60,7 +60,7 @@
 7. **Additional notes**:
     - If you need to pass environment variables to your React app, you can add the `-e` flag when running the container:
         ```
-        docker run -p 5173:5173 -e VITE_APP_MY_ENV_VAR=value <image_name>
+        docker run -p 5173:5173 -e VITE_NEWS_API_KEY=<key> <image_name>
         ```
-        Replace `VITE_APP_MY_ENV_VAR` with the name of your environment variable, and `value` with the desired value.
+        Replace `VITE_NEWS_API_KEY` with the name of your environment variable, and `value` with the desired value.
     - If you need to access the React app from a different host or IP address, replace `localhost` with the appropriate IP address or hostname when accessing the app in your web browser.

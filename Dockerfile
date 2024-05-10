@@ -13,6 +13,9 @@ RUN npm install -g pnpm && pnpm install
 # Copy the current directory contents into the container at /app
 COPY . .
 
+# Define environment variables
+# ENV VITE_NEWS_API_KEY=<YOUR API KEY>
+
 # Make port 5173 available to the world outside this container
 EXPOSE 5173
 
