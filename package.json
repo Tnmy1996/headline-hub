@@ -3,13 +3,19 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Tnmy1996/headline-hub"
+    },
     "scripts": {
         "dev": "vite --host",
         "build": "tsc && vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "lint-fix": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
         "format": "prettier --write .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "pnpm run build",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@hookform/resolvers": "^3.3.4",
@@ -86,6 +92,7 @@
         "eslint-plugin-react-refresh": "^0.4.7",
         "eslint-plugin-tailwindcss": "^3.15.1",
         "eslint-plugin-unused-imports": "^3.2.0",
+        "gh-pages": "^6.1.1",
         "postcss": "^8.4.38",
         "prettier": "^3.2.5",
         "prettier-plugin-tailwindcss": "^0.5.14",
