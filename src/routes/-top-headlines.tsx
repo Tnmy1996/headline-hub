@@ -165,8 +165,8 @@ export function TopHeadlines({
             ) : null}
 
             {isLoading ? (
-                <div className='mx-auto flex w-full justify-center'>
-                    <Spinner />
+                <div className='mx-auto flex w-full flex-1 items-center justify-center'>
+                    <Spinner size='lg' />
                 </div>
             ) : null}
 

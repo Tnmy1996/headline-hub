@@ -30,6 +30,7 @@ export function ArticleGrid({
                 ))}
             </div>
             <PaginationBar
+                className='p-4'
                 totalCount={totalCount}
                 currentPage={currentPage}
                 siblingCount={siblingCount}

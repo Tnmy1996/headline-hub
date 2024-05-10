@@ -17,7 +17,9 @@ import { auth } from './utils/auth';
 const router = createRouter({
     routeTree,
     defaultPendingComponent: () => (
-        <div className={`p-2 text-2xl`}>{<Spinner />}</div>
+        <div className='mx-auto flex min-h-screen w-full flex-1 items-center justify-center'>
+            <Spinner size='lg' />
+        </div>
     ),
     defaultErrorComponent: ({ error }) => <ErrorComponent error={error} />,
     context: {
