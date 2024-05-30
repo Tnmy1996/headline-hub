@@ -1,4 +1,4 @@
-import { type NewsAPIResponse } from '@/api/newa-api/types';
+import { type NewsAPIResponse } from '@/api/news-api/types';
 import { removePropertiesByValue } from '@/utils/utility-functions';
 import { useQuery } from '@tanstack/react-query';
 

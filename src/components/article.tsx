@@ -1,4 +1,4 @@
-import { type Article } from '@/api/newa-api/types';
+import { type Article } from '@/api/news-api/types';
 import { format, parseISO } from 'date-fns';
 
 import { Badge } from './ui/badge';

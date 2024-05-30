@@ -1,4 +1,4 @@
-import { CATEGORIES, COUNTRIES, LANGUAGES } from '@/api/newa-api/constants';
+import { CATEGORIES, COUNTRIES, LANGUAGES } from '@/api/news-api/constants';
 import { z } from 'zod';
 
 export const CountrySchema = z.union([

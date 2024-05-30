@@ -5,9 +5,9 @@ import {
     COUNTRIES_LABELS,
     LANGUAGES,
     LANGUAGES_LABELS,
-} from '@/api/newa-api/constants';
-import { SORT_BY, SORT_BY_LABELS } from '@/api/newa-api/everything/constants';
-import { SourcesData } from '@/api/newa-api/sources/data';
+} from '@/api/news-api/constants';
+import { SORT_BY, SORT_BY_LABELS } from '@/api/news-api/everything/constants';
+import { SourcesData } from '@/api/news-api/sources/data';
 import { type Option } from '@/components/types';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { createFileRoute } from '@tanstack/react-router';

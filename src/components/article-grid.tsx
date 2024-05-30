@@ -1,4 +1,4 @@
-import { type Article } from '@/api/newa-api/types';
+import { type Article } from '@/api/news-api/types';
 import ArticleCard from '@/components/article';
 import { PaginationBar, type PaginationProps } from '@/components/pagination';
 

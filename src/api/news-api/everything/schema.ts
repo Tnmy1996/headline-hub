@@ -1,4 +1,4 @@
-import { LanguageSchema } from '@/api/newa-api/schema';
+import { LanguageSchema } from '@/api/news-api/schema';
 import { z } from 'zod';
 
 import { SEARCH_IN, SORT_BY } from './constants';

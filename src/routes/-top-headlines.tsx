@@ -1,5 +1,5 @@
-import { COUNTRIES, COUNTRIES_LABELS } from '@/api/newa-api/constants';
-import { useTopHeadlinesQuery } from '@/api/newa-api/top-headlines';
+import { COUNTRIES, COUNTRIES_LABELS } from '@/api/news-api/constants';
+import { useTopHeadlinesQuery } from '@/api/news-api/top-headlines';
 import { ArticleGrid } from '@/components/article-grid';
 import { Combobox } from '@/components/combobox';
 import { SelectDropdown } from '@/components/select';

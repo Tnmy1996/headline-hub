@@ -1,5 +1,5 @@
-import { useEverythingQuery } from '@/api/newa-api/everything';
-import { SORT_BY } from '@/api/newa-api/everything/constants';
+import { useEverythingQuery } from '@/api/news-api/everything';
+import { SORT_BY } from '@/api/news-api/everything/constants';
 import { ArticleGrid } from '@/components/article-grid';
 import { Combobox } from '@/components/combobox';
 import { DatePickerWithRange } from '@/components/date-range-picker';
